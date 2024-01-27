@@ -16,4 +16,6 @@ public interface SysRoleMapper {
     void updateSysRole(SysRole sysRole);
 
     void deleteSysRole(Long roleId);
+
+    List<SysRole> findAllRoles();
 }

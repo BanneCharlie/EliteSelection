@@ -6,6 +6,12 @@ elite:
     noAuthUrls:
       - /admin/system/index/login
       - /admin/system/index/generateValidateCode
+# 自定义配置 编写一个配置类获取关于minio仓库的信息
+  minio:
+    endpoint: http://127.0.0.1:9000
+    accessKey: minioadmin
+    secretKey: minioadmin
+    bucketName: elite-image
 
 spring:
   # 配置Mysql的连接信息
@@ -31,7 +37,7 @@ spring:
 mybatis:
   mapper-locations: classpath:/mapper/*.xml   # mapper映射文件位置
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #用于控制台打印sql语句
+   # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl   #用于控制台打印sql语句
     map-underscore-to-camel-case: true  # 开启驼峰
 
 # page helper 配置

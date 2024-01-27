@@ -14,6 +14,10 @@
         </where>
     </select>
 
+    <select id="findAllRoles" resultType="org.example.model.entity.system.SysRole">
+        select * from sys_role where is_deleted = 0
+    </select>
+
 
     <insert id="saveSysRole">
         insert into sys_role (id, role_name, role_code, description)

@@ -5,6 +5,8 @@ import org.example.model.dto.system.SysRoleDto;
 import org.example.model.entity.system.SysRole;
 import org.springframework.stereotype.Service;
 
+import java.util.Map;
+
 @Service
 public interface SysRoleService {
     PageInfo<SysRole> findByPage(int pageNum, int pageSize, SysRoleDto sysRoleDto);
@@ -14,4 +16,6 @@ public interface SysRoleService {
     void updateSysRole(SysRole sysRole);
 
     void deleteSysRole(Long roleId);
+
+    Map<String, Object> findAllRoles(Long userId);
 }

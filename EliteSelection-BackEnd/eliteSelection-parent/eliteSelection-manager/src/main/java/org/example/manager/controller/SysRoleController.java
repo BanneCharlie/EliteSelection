@@ -20,7 +20,7 @@ public class SysRoleController {
     private SysRoleService sysRoleService;
 
     /**
-     * 查询角色的信息
+     * 查询角色的信息  并且实现分页查询
      * @param pageNum
      * @param pageSize
      * @param sysRoleDto

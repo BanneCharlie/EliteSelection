@@ -1,10 +1,14 @@
 package org.example.model.entity.system;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.example.model.entity.base.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Schema(description = "系统用户实体类")
 public class SysUser extends BaseEntity {
 

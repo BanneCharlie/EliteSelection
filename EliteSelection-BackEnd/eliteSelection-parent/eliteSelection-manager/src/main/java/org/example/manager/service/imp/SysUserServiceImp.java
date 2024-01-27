@@ -1,7 +1,10 @@
 package org.example.manager.service.imp;
 
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.log.level.DebugLog;
 import com.alibaba.fastjson.JSON;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
 import org.example.exception.CustomLoginException;
 import org.example.manager.mapper.SysUserMapper;
 import org.example.manager.service.SysUserService;
@@ -18,6 +21,7 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 @Service
+@Slf4j
 public class SysUserServiceImp implements SysUserService {
     @Autowired
     private SysUserMapper sysUserMapper;
@@ -48,6 +52,7 @@ public class SysUserServiceImp implements SysUserService {
         String userName = loginDto.getUserName();
         // 2.根据用户名查询表 sys_user
         SysUser sysUser = sysUserMapper.selectByUserName(userName);
+
         // 3.查询不到对应的信息,用户不存在 返回错误信息
         if (sysUser  ==  null){
             // 自定义异常,进行抛出

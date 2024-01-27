@@ -1,0 +1,14 @@
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\service\SysRoleService.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\service\ValidateCodeService.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\config\WebMvcConfiguration.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\controller\SysRoleController.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\mapper\SysRoleMapper.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\properties\NoAuthUrls.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\service\SysUserService.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\ManagerApplication.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\config\LoginAuthInterceptor.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\service\imp\SysUserServiceImp.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\controller\IndexController.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\service\imp\SysRoleServiceImp.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\mapper\SysUserMapper.java
+G:\LearningText\9.MicroservicesProjects\EliteSelection\Code\EliteSelection-BackEnd\eliteSelection-parent\eliteSelection-manager\src\main\java\org\example\manager\service\imp\ValidateCodeServiceImp.java

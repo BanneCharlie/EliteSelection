@@ -2,14 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="org.example.manager.mapper.SysUserMapper">
 
-    <!-- 用于select查询公用抽取的列 -->
-    <sql id="columns">
-        id,username userName ,password,name,phone,avatar,description,status,create_time,update_time,is_deleted
-    </sql>
-
-   <!-- 根据用户名获取sys_user表中信息 -->
     <select id="selectByUserName" resultType="org.example.model.entity.system.SysUser">
-        select <include refid="columns" /> from sys_user where username = #{userName} and is_deleted = 0
+        select * from sys_user where username = #{userName} and is_deleted = 0
     </select>
-
 </mapper>

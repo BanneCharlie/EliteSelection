@@ -33,8 +33,8 @@ public class LoginAuthInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //0.预检请求直接放行
         String method = request.getMethod();
-        if ("OPTIONS".equals(method)){
-            return true;
+        if("OPTIONS".equals(method)) {      // 如果是跨域预检请求，直接放行
+            return true ;
         }
         //1.获取token 根据token从redis中获取用户信息
         String token = request.getHeader("token");

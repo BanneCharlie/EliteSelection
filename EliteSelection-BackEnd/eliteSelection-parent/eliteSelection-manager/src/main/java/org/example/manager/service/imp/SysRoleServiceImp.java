@@ -4,8 +4,10 @@ import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.example.manager.mapper.SysRoleMapper;
+import org.example.manager.mapper.SysRoleMenuMapper;
 import org.example.manager.mapper.SysRoleUserMapper;
 import org.example.manager.service.SysRoleService;
+import org.example.model.dto.system.AssginMenuDto;
 import org.example.model.dto.system.SysRoleDto;
 import org.example.model.entity.system.SysRole;
 import org.example.model.entity.system.SysRoleUser;
@@ -26,6 +28,9 @@ public class SysRoleServiceImp implements SysRoleService {
 
     @Autowired
     private SysRoleUserMapper sysRoleUserMapper;
+
+    @Autowired
+    private SysRoleMenuMapper sysRoleMenuMapper;
 
 
     @Override
@@ -79,5 +84,17 @@ public class SysRoleServiceImp implements SysRoleService {
 
         map.put("sysUserRoles", sysRoleId);
         return map;
+    }
+
+    @Override
+    public void doAssign(AssginMenuDto assginMenuDto) {
+        // 根据角色的id删除其所对应的菜单数据
+        sysRoleMenuMapper.deleteByRoleId(assginMenuDto.getRoleId());
+
+        // 获取菜单的id
+        List<Map<String, Number>> menuInfo = assginMenuDto.getMenuIdList();
+        if(menuInfo != null && menuInfo.size() > 0) {
+            sysRoleMenuMapper.doAssign(assginMenuDto) ;
+        }
     }
 }

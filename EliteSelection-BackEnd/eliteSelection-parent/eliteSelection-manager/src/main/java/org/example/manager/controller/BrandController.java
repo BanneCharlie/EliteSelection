@@ -1,6 +1,8 @@
 package org.example.manager.controller;
 
 import com.github.pagehelper.PageInfo;
+import org.example.log.OperatorType;
+import org.example.log.annotation.Log;
 import org.example.manager.service.BrandService;
 import org.example.model.entity.product.Brand;
 import org.example.model.vo.common.ResultCodeEnum;
@@ -17,6 +19,7 @@ public class BrandController {
     @Autowired
     private BrandService brandService;
 
+    @Log(title = "品牌列表",businessType = 0,operatorType = OperatorType.MANAGE)
     @GetMapping("/{page}/{limit}")
     public Result<PageInfo<Brand>> findByPage(@PathVariable("page") Integer page, @PathVariable("limit") Integer limit){
         PageInfo<Brand> pageInfo = brandService.findByPage(page,limit);
@@ -47,5 +50,4 @@ public class BrandController {
         brandService.deleteById(id);
         return Result.build(null, ResultCodeEnum.SUCCESS) ;
     }
-
 }

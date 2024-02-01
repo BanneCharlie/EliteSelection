@@ -8,11 +8,11 @@ import java.util.List;
 @Mapper
 public interface ProductSpecMapper {
 
-    List<ProductSpec> findAll();
-
     void save(ProductSpec productSpec);
 
     void updateById(ProductSpec productSpec);
 
     void deleteById(Long id);
+
+    List<ProductSpec> findAll();
 }

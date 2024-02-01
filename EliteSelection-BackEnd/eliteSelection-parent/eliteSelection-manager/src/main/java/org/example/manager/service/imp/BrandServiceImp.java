@@ -21,7 +21,7 @@ public class BrandServiceImp implements BrandService {
         // 1.初始化分页
         PageHelper.startPage(page, limit);
         // 2.执行查询
-        List<Brand> brandList = brandMapper.findByPage();
+        List<Brand> brandList = brandMapper.findAll();
 
         return new PageInfo<>(brandList);
     }
@@ -43,6 +43,6 @@ public class BrandServiceImp implements BrandService {
 
     @Override
     public List<Brand> findAll() {
-        return brandMapper.findAll() ;
+        return brandMapper.findAll();
     }
 }

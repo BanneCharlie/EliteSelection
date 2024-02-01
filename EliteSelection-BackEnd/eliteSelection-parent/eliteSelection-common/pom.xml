@@ -15,6 +15,7 @@
     <modules>
         <module>common-util</module>
         <module>common-service</module>
+        <module>common-log</module>
     </modules>
 
     <properties>
@@ -27,5 +28,6 @@
             <artifactId>hutool-all</artifactId>
             <version>5.8.25</version>
         </dependency>
+
     </dependencies>
 </project>

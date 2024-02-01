@@ -2,6 +2,7 @@ package org.example.manager.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.example.model.dto.product.CategoryBrandDto;
+import org.example.model.entity.product.Brand;
 import org.example.model.entity.product.CategoryBrand;
 
 import java.util.List;
@@ -15,4 +16,6 @@ public interface CategoryBrandMapper {
     void updateById(CategoryBrand categoryBrand);
 
     void deleteById(Long id);
+
+    List<Brand> findBrandByCategoryId(Long categoryId);
 }

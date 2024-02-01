@@ -62,5 +62,13 @@
         <include refid="findPageWhere"/>
 
     </select>
+    <select id="findBrandByCategoryId" resultType="org.example.model.entity.product.Brand">
+        select
+            b.*
+        from category_brand cb
+                 left join brand b  on b.id = cb.brand_id
+        where cb.category_id = #{categoryId} and cb.is_deleted = 0
+        order by cb.id desc
+    </select>
 
 </mapper>

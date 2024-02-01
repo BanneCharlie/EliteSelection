@@ -3,6 +3,8 @@ package org.example.utils;
 import org.example.model.entity.system.SysUser;
 import org.springframework.stereotype.Component;
 
+import java.awt.print.PrinterJob;
+
 // AuthContextUtil 工具类的作用就是将当前用户存放在ThreadLocal中,方便读取;
 @Component
 public class AuthContextUtil {
@@ -22,4 +24,5 @@ public class AuthContextUtil {
     public static void remove() {
         threadLocal.remove();
     }
+
 }

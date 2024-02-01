@@ -54,8 +54,6 @@ public class SysUserServiceImp implements SysUserService {
             // 自定义异常,进行抛出
             throw new CustomLoginException(ResultCodeEnum.CAPTCHA_ERROR);
         }
-        // 验证码一致删除redis中的验证码
-        redisTemplate.delete("user:login:validatecode:"+codeKey);
 
         // 1.获取提交的用户 获取用户名
         String userName = loginDto.getUserName();

@@ -40,4 +40,9 @@
     <select id="findByPage" resultType="org.example.model.entity.product.Brand">
         select * from brand where is_deleted = 0 order by id desc
     </select>
+
+    <select id="findAll" resultType="org.example.model.entity.product.Brand">
+        select * from brand where is_deleted = 0 order by id desc
+    </select>
+
 </mapper>

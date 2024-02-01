@@ -28,7 +28,7 @@ public class ValidateCodeServiceImp implements ValidateCodeService{
         // 2.生成UUID作为验证码的key值
         String key = UUID.randomUUID().toString().replace("-", "");
         // 3.将生成的验证码存放入Redis中
-        redisTemplate.opsForValue().set("user:login:validatecode:"+key, codeValue,5,TimeUnit.MINUTES);
+        redisTemplate.opsForValue().set("user:login:validatecode:"+key, codeValue,3,TimeUnit.MINUTES);
         // 4.返回响应结果
         ValidateCodeVo validateCodeVo = new ValidateCodeVo();
         validateCodeVo.setCodeKey(key);

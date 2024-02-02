@@ -12,6 +12,18 @@
     <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-manager/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-model/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-model/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-server-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service-client/service-product-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service-client/service-product-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service-client/service-user-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service/service-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service/service-order/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service/service-product/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service/service-product/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service/service-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eliteSelection-parent/eliteSelection-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eliteSelection-parent/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eliteSelection-parent/src/main/resources" charset="UTF-8" />
   </component>

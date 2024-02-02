@@ -1,0 +1,32 @@
+server:
+  port: 8510
+
+spring:
+  application:
+    name: eliteSelection-server-gateway
+  cloud:
+    # nacos配置
+    nacos:
+      discovery:
+        server-addr: 192.168.238.128:8848
+    # gateway 配置
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            # 允许所有数据源
+            allowedOriginPatterns: "*"
+            # 允许请求中携带的头信息
+            allowedHeaders: "*"
+            # 运行跨域的请求方式
+            allowedMethods: "*"
+            # 跨域检测的有效期,单位s
+            maxAge: 36000
+      routes:
+        - id: service-product
+          uri: lb://service-product
+          predicates:
+            - Path=/*/product/**

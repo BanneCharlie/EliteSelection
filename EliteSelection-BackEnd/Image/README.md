@@ -110,3 +110,63 @@
 - 创建LogAspect(utils工具)实现AOP,并将用户的操作信息记录到表中
 ![img_11.png](img_11.png)
 - 自定义EnableLogAspect注解,启动类可扫描自定义的注解
+![img_12.png](img_12.png)
+# 2.2(前台系统 前后端的搭建)
+*前端系统架构 :*
+通过Nginx进行部署
+```shell
+# 单机
+mkdir -p /EliteSelection/nginx/html 
+mkdir -p /EliteSelection/nginx/config
+mkdir -p /EliteSelection/nginx/logs
+
+docker run   --name nginx -d -p 80:80  nginx
+# 将nginx.conf中的配置文件和conf.d复制到宿主机中 然后删除容器再重新创建容器
+docker cp nginx:/etc/nginx/nginx.conf  /EliteSelection/nginx/config/nginx.conf
+docker cp nginx:/etc/nginx/conf.d  /EliteSelection/nginx/config/conf.d
+docker cp nginx:/usr/share/nginx/html /EliteSelection/nginx/html
+
+docker rm -f nginx
+
+docker run  -p 80:80 \
+     --name nginx \
+     -v  /EliteSelection/nginx/html:/usr/share/nginx/html \
+     -v  /EliteSelection/nginx/config/nginx.conf:/etc/nginx/nginx.conf \
+     -v  /EliteSelection/nginx/config/conf.d:/etc/nginx/conf.d \
+     -v  /EliteSelection/nginx/logs:/var/log/nginx \
+     -d  nginx
+```
+![img_14.png](img_14.png)
+
+*后端系统架构图 :*
+![img_13.png](img_13.png)
+
+- 首页数据的展示
+- 分类数据的展示
+`微服务的架构图 :`
+![img_16.png](img_16.png)
+## Nacos注册中心的创建
+```shell
+# 单机
+mkdir -p /EliteSelection/nacos
+
+docker run -p 8848:8848 -p 9848:9848 --name nacos -d nacos/nacos-server
+
+# 复制nacos文件到宿主机,并删除容器 之后才可以进行本地挂载
+docker cp nacos:/home/nacos/logs /EliteSelection/nacos
+docker cp nacos:/home/nacos/conf /EliteSelection/nacos
+
+docker rm -f nacos
+
+docker run  \
+--name nacos \
+-p 8848:8848 -p 9848:9848 -p 9849:9849 \
+-e JVM_XMS=256m -e JVM_XMX=256m \
+-e MODE=standalone \
+-v /EliteSelection/nacos/logs:/home/nacos/logs \
+-v /EliteSelection/nacos/conf:/home/nacos/conf \
+--restart=always \
+-d nacos/nacos-server
+```
+## Gateway网关的搭建
+![img_15.png](img_15.png)

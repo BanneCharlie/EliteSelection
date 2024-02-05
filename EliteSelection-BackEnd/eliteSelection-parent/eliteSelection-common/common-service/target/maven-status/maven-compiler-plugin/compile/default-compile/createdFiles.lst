@@ -1,4 +1,7 @@
 org\example\exception\GlobalExceptionHandler.class
+org\example\annonation\EnableUserWebMvcConfiguration.class
+org\example\config\Knife4jConfig.class
+org\example\config\UserWebMvcConfiguration.class
 org\example\App.class
 org\example\exception\CustomLoginException.class
-org\example\config\Knife4jConfig.class
+org\example\Interceptor\UserLoginAuthInterceptor.class

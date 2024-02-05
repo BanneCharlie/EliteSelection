@@ -16,6 +16,7 @@
         <module>service-order</module>
         <module>service-product</module>
         <module>service-user</module>
+        <module>service-order</module>
     </modules>
 
     <properties>
@@ -29,12 +30,19 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--common下的service 依赖-->
         <dependency>
+            <groupId>org.example</groupId>
+            <artifactId>eliteSelection-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+
+        <!--common下的service 依赖-->
+<!--        <dependency>
             <groupId>org.example</groupId>
             <artifactId>common-service</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
+        </dependency>-->
 
         <!-- mybatis的起步依赖 -->
         <dependency>
@@ -61,10 +69,10 @@
         </dependency>
 
         <!-- 服务注册 -->
-<!--        <dependency>
+        <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>-->
+        </dependency>
 
         <!-- 流量控制 -->
         <dependency>

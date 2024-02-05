@@ -7,6 +7,12 @@ elite:
       - /admin/system/index/login
       - /admin/system/index/generateValidateCode
 # 自定义配置 编写一个配置类获取关于minio仓库的信息
+#  minio:
+#    endpoint: http://192.168.238.128:9000
+#    accessKey: admin
+#    secretKey: admin123456
+#    bucketName: elite-image
+#    create-bucket: true
   minio:
     endpoint: http://127.0.0.1:9000
     accessKey: minioadmin

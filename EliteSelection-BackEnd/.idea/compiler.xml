@@ -10,14 +10,16 @@
         <module name="common-util" />
         <module name="service-product-client" />
         <module name="common-service" />
-        <module name="service-product" />
-        <module name="service-user" />
         <module name="service-user-client" />
         <module name="eliteSelection-manager" />
         <module name="common-log" />
-        <module name="eliteSelection-server-gateway" />
-        <module name="eliteSelection-model" />
         <module name="service-order" />
+        <module name="service-product" />
+        <module name="service-user" />
+        <module name="service-cart" />
+        <module name="eliteSelection-server-gateway" />
+        <module name="service-cart-client" />
+        <module name="eliteSelection-model" />
         <module name="eliteSelection-service-client" />
       </profile>
     </annotationProcessing>
@@ -32,6 +34,8 @@
       <module name="eliteSelection-server-gateway" options="-parameters" />
       <module name="eliteSelection-service" options="" />
       <module name="eliteSelection-service-client" options="-parameters" />
+      <module name="service-cart" options="-parameters" />
+      <module name="service-cart-client" options="-parameters" />
       <module name="service-order" options="-parameters" />
       <module name="service-product" options="-parameters" />
       <module name="service-product-client" options="-parameters" />

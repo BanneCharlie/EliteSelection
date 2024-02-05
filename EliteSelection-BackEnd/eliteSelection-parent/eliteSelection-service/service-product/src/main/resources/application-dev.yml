@@ -18,6 +18,12 @@ spring:
     username: root
     password: 123456
 
+  # Redis配置
+  data:
+    redis:
+      port: 6379
+      host: 192.168.238.128
+
 # mybatis配置
 mybatis:
   mapper-locations: classpath:/mapper/*.xml   # mapper映射文件位置

@@ -44,10 +44,10 @@ public class FileUploadServiceImp implements FileUploadService {
 
             // 判断桶是否存在
             boolean found =
-                    minioClient.bucketExists(BucketExistsArgs.builder().bucket("asiatrip").build());
+                    minioClient.bucketExists(BucketExistsArgs.builder().bucket(minioProperties.getBucketName()).build());
             if (!found) {
                 // Make a new bucket called 'asiatrip'.
-                minioClient.makeBucket(MakeBucketArgs.builder().bucket("asiatrip").build());
+                minioClient.makeBucket(MakeBucketArgs.builder().bucket(minioProperties.getBucketName()).build());
             } else {
                 System.out.println("Bucket 'elite-image' already exists.");
             }
@@ -55,6 +55,7 @@ public class FileUploadServiceImp implements FileUploadService {
             PutObjectArgs putObjectArgs = PutObjectArgs.builder()
                     .bucket(minioProperties.getBucketName())
                     .stream(multipartFile.getInputStream(), multipartFile.getSize(), -1)
+                    .contentType(multipartFile.getContentType())
                     .object(fileName)
                     .build();
 

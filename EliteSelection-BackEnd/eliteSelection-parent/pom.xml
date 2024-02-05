@@ -27,6 +27,8 @@
     <module>eliteSelection-service-client</module>
     <module>eliteSelection-service-client/service-product-client</module>
     <module>eliteSelection-service-client/service-user-client</module>
+      <module>eliteSelection-service/service-cart</module>
+      <module>eliteSelection-service-client/service-cart-client</module>
   </modules>
 
 <!--指定版本-->

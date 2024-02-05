@@ -5,6 +5,7 @@ import com.github.xiaoymin.knife4j.core.util.CollectionUtils;
 import org.example.model.entity.product.Category;
 import com.banne.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +23,8 @@ public class CategoryServiceImp implements CategoryService {
     }
 
     @Override
+    // 存入redis中的key值为 category::all
+    @Cacheable(value = "category",key = "'all'")
     public List<Category> findCategoryTree() {
         // 1.获取category表中的所有数据,将获取到的数据进行封装
         List<Category> categoryList = categoryMapper.findCategoryTree();
